@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Samin's Portfolio</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="./portfolio.js" defer></script>
+
+    </head>
+    <h1 style="font-size:50px;font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Helvetica, sans-serif;">
+      <font color=#293354>Samin's Portfolio</font></h1>
+    <body>
+    
+        <!--Tabs-->
+        <div class="tab">
+          <button class="tablinks" onclick="openStoreTab(event, 'About Me')" id="defaultOpen">About Me</button>
+          <button class="tablinks" onclick="openStoreTab(event, 'Contact')">Contact</button>
+
+        </div>
+
+        <div id="About Me" class="tabcontent">
+            <h3>Hi, I'm Samin, a beginner programmer, and here's some information you can use to get to know me:</h3>
+            <p>     Im currently working with and learning c++, as well as html, js, and css.</p>
+            <p> My current coding interests include making websites with well designed interfaces, and solving questions on leetcode, but I'm looking to expand that in the near future.</p>
+            <p> In the future I plan to:</p>
+            <p> - learn more coding languages</p>
+            <p> - develop my own indie game</p>
+            <p> - learn more about software development</p>
+            
+            
+            
+        </div>
+
+        <div id="Contact" class="tabcontent">
+            <h3>Here's where you can find me:</h3>
+            <p><a href="https://github.com/Samin-A1">GitHub</a></p>
+            <p><a href="https://www.linkedin.com/in/samin-anan-512b4a2a7/">LinkedIn</a></p>
+        </div>
+
+        <script>
+            function openStoreTab(evt, tabName) {
+              var i, tabcontent, tablinks;
+              tabcontent = document.getElementsByClassName("tabcontent");
+              for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+              }
+              tablinks = document.getElementsByClassName("tablinks");
+              for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+              }
+              document.getElementById(tabName).style.display = "block";
+              evt.currentTarget.className += " active";
+            }
+            document.getElementById("defaultOpen").click();
+      
+            </script>
+
+        </body>
+    </head>
+</html>
